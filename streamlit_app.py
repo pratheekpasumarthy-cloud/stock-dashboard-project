@@ -19,7 +19,7 @@ def fetch_stock_data(ticker: str, years: int = 3) -> pd.DataFrame:
         if df.empty:
             return pd.DataFrame()
 
-        # force Close to be a 1D Series
+        
         if isinstance(df["Close"], pd.DataFrame):
             close_series = df["Close"].iloc[:, 0]
         else:
